@@ -8,7 +8,6 @@ const [pokemon, setPokemon] = useState('');
         async function fetchPokemons() {
             try {
                 const response = await axios.get(`${url}`);
-                console.log(response.data);
                 setPokemon(response.data);
             } catch (error) {
                 console.error(error);
